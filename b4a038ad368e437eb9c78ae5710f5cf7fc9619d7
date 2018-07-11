@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_105ec8e9",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2475
+      },
+      "writtenOn": "2018-07-11T16:49:49Z",
+      "side": 1,
+      "message": "These aren\u0027t necessary with the oparent parent pom",
+      "revId": "b4a038ad368e437eb9c78ae5710f5cf7fc9619d7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
