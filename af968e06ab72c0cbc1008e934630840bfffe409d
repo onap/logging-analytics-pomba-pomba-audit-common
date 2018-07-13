@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a9dcd25_a4f068ca",
+        "filename": "src/main/resources/application.properties",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2931
+      },
+      "writtenOn": "2018-07-13T16:17:24Z",
+      "side": 1,
+      "message": "The application.properties is not used. I think I will remove",
+      "revId": "af968e06ab72c0cbc1008e934630840bfffe409d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
