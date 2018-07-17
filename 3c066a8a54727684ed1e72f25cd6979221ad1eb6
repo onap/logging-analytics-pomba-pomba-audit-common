@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a9dcd25_679edd58",
+        "filename": "pom.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2475
+      },
+      "writtenOn": "2018-07-17T14:20:03Z",
+      "side": 1,
+      "message": "Michael, any idea why nexus shows a released version 1.2.0, if 1.2.0-SNAPSHOT is still under development?\n\nhttps://nexus.onap.org/#nexus-search;gav~org.onap.oparent~oparent~1.2.0~~",
+      "parentUuid": "1a9dcd25_470f21e2",
+      "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a9dcd25_04f917c8",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/ModelContext.java",
         "patchSetId": 7
