@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a9dcd25_470f21e2",
+        "filename": "pom.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1077
+      },
+      "writtenOn": "2018-07-17T14:00:29Z",
+      "side": 1,
+      "message": "We are at 1.2.0-SNAPSHOT but you are ok to stay at the stable 1.1.1",
+      "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a9dcd25_04f917c8",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/ModelContext.java",
         "patchSetId": 7
@@ -30,6 +47,23 @@
       "writtenOn": "2018-07-16T18:15:22Z",
       "side": 1,
       "message": "What is the reason for this file?  Is it really used by ONAP jenkins?\n\nLine 6 should by minor\u003d3 to match version defined in pom.xml 1.3.0-SNAPSHOT",
+      "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a9dcd25_c70251b4",
+        "filename": "version.properties",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1077
+      },
+      "writtenOn": "2018-07-17T14:00:29Z",
+      "side": 1,
+      "message": "The LF uses this for their JJB jobs",
       "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
