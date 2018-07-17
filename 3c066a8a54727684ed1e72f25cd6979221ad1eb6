@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a9dcd25_04f917c8",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/ModelContext.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 129
+      },
+      "writtenOn": "2018-07-17T03:46:00Z",
+      "side": 1,
+      "message": "These are beans, I know, but don\u0027t forget your javadoc. Class comments would have helped me understand what I\u0027m looking at.",
+      "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a9dcd25_f03946d9",
         "filename": "version.properties",
         "patchSetId": 7
