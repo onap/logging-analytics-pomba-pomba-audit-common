@@ -85,6 +85,24 @@
       "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_70120864",
+        "filename": "version.properties",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3479
+      },
+      "writtenOn": "2018-07-25T16:32:03Z",
+      "side": 1,
+      "message": "So, should this be matching up with the version defined in pom.xml?  Like Brad said, minor\u003d3?",
+      "parentUuid": "1a9dcd25_c70251b4",
+      "revId": "3c066a8a54727684ed1e72f25cd6979221ad1eb6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
