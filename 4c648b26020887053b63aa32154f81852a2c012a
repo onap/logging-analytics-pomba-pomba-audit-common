@@ -1,0 +1,9 @@
+Code-Review+2: Shane Daniel <shane.daniel@amdocs.com>
+Verified+1: Shane Daniel <shane.daniel@amdocs.com>
+Code-Review+2: Michael O'Brien <frank.obrien@amdocs.com>
+Verified+1: Michael O'Brien <frank.obrien@amdocs.com>
+Submitted-by: Michael O'Brien <frank.obrien@amdocs.com>
+Submitted-at: Fri, 03 Aug 2018 13:07:34 +0000
+Reviewed-on: https://gerrit.onap.org/r/58795
+Project: logging-analytics/pomba/pomba-audit-common
+Branch: refs/heads/master
