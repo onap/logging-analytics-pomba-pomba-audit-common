@@ -15,10 +15,13 @@
  * limitations under the License.
  * ============LICENSE_END=====================================================
  */
+
 package org.onap.pomba.common.datatypes;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Service {
 
@@ -26,11 +29,17 @@ public class Service {
     @SerializedName("name")
     private String name;
     @Expose
-    @SerializedName("invariant-id")
+    @SerializedName("invariantUUID")
     private String invariantUuid;
     @Expose
     @SerializedName("uuid")
     private String uuid;
+    @Expose
+    @SerializedName("dataQuality")
+    private DataQuality dataQuality = new DataQuality();
+    @Expose
+    @SerializedName("attributeList")
+    private List<Attribute> attributeList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -49,5 +58,20 @@ public class Service {
     }
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+    public DataQuality getDataQuality() {
+        return dataQuality;
+    }
+    public void setDataQuality(DataQuality dataQuality) {
+        this.dataQuality = dataQuality;
+    }
+    public List<Attribute> getAttribute() {
+        return attributeList;
+    }
+    public void setAttribute(List<Attribute> attributeList) {
+        this.attributeList = attributeList;
+    }
+    public void addAttribute(Attribute attribute) {
+        this.attributeList.add(attribute);
     }
 }

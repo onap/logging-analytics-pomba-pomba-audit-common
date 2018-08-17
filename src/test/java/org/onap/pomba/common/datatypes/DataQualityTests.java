@@ -18,23 +18,20 @@
 
 package org.onap.pomba.common.datatypes;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.DataQuality.Status;
 
-public class VfModuleTests {
+public class DataQualityTests {
     @Test
-    public void testVFModule() {
-        VFModule aVFModule = new VFModule();
-        aVFModule.setInvariantUuid("Invariant Uuid");
-        aVFModule.setUuid("Uuid");
-        aVFModule.setMaxInstances(10);
-        aVFModule.setMinInstances(1);
-
-        assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("VFModule Uuid doesn't match", aVFModule.getUuid().equals("Uuid"));
-        assertEquals(aVFModule.getMaxInstances(), 10);
-        assertEquals(aVFModule.getMinInstances(), 1);
+    public void testDataQuality() {
+        DataQuality dataQuality = new DataQuality();
+        dataQuality.setStatus(Status.ok);
+        assertTrue("DataQuality Status in not OK", dataQuality.getStatus().equals("ok"));
+        dataQuality.setStatus(Status.error);
+        dataQuality.setErrorText("Test");
+        assertTrue("DataQuality Status in not OK", dataQuality.getStatus().equals("error"));
+        assertTrue("DataQualityErrorText is not Test", dataQuality.getErrorText().equals("Test"));
     }
 }

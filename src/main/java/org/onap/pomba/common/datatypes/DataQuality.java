@@ -18,23 +18,35 @@
 
 package org.onap.pomba.common.datatypes;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-import org.junit.Test;
+public class DataQuality {
+    @Expose
+    @SerializedName("status")
+    private String status;
+    @Expose
+    @SerializedName("error-text")
+    private String errorText;
 
-public class VfModuleTests {
-    @Test
-    public void testVFModule() {
-        VFModule aVFModule = new VFModule();
-        aVFModule.setInvariantUuid("Invariant Uuid");
-        aVFModule.setUuid("Uuid");
-        aVFModule.setMaxInstances(10);
-        aVFModule.setMinInstances(1);
+    public enum Status {
+        ok,
+        error
+    }
 
-        assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("VFModule Uuid doesn't match", aVFModule.getUuid().equals("Uuid"));
-        assertEquals(aVFModule.getMaxInstances(), 10);
-        assertEquals(aVFModule.getMinInstances(), 1);
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status.toString();
+    }
+
+    public String getErrorText() {
+        return this.errorText;
+    }
+
+    public void setErrorText(String errorText) {
+        this.errorText = errorText;
     }
 }

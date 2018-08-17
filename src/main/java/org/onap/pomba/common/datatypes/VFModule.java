@@ -15,26 +15,48 @@
  * limitations under the License.
  * ============LICENSE_END=====================================================
  */
+
 package org.onap.pomba.common.datatypes;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VFModule {
 
     @Expose
-    @SerializedName("invariant-id")
+    @SerializedName("name")
+    private String name;
+    @Expose
+    @SerializedName("invariantUUID")
     private String invariantUuid;
     @Expose
     @SerializedName("uuid")
     private String uuid;
     @Expose
-    @SerializedName("max-instances")
+    @SerializedName("nfNamingCode")
+    private String nfNamingCode;
+    @Expose
+    @SerializedName("maxInstances")
     private int maxInstances;
     @Expose
-    @SerializedName("min-instances")
+    @SerializedName("minInstances")
     private int minInstances;
+    @Expose
+    @SerializedName("dataQuality")
+    private DataQuality dataQuality = new DataQuality();
+    @Expose
+    @SerializedName("attributeList")
+    private List<Attribute> attributeList = new ArrayList<>();
 
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getInvariantUuid() {
         return invariantUuid;
     }
@@ -47,6 +69,12 @@ public class VFModule {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
+    public String getNfNamingCode() {
+        return nfNamingCode;
+    }
+    public void setNfNamingCode(String nfNamingCode) {
+        this.nfNamingCode = nfNamingCode;
+    }
     public int getMaxInstances() {
         return maxInstances;
     }
@@ -58,5 +86,20 @@ public class VFModule {
     }
     public void setMinInstances(int minInstances) {
         this.minInstances = minInstances;
+    }
+    public List<Attribute> getAttribute() {
+        return attributeList;
+    }
+    public void setAttribute(List<Attribute> attributeList) {
+        this.attributeList = attributeList;
+    }
+    public void addAttribute(Attribute attribute) {
+        this.attributeList.add(attribute);
+    }
+    public DataQuality getDataQuality() {
+        return dataQuality;
+    }
+    public void setDataQuality(DataQuality dataQuality) {
+        this.dataQuality = dataQuality;
     }
 }

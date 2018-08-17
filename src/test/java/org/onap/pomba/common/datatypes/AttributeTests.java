@@ -18,23 +18,19 @@
 
 package org.onap.pomba.common.datatypes;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.Attribute.Value;
 
-public class VfModuleTests {
+public class AttributeTests {
     @Test
-    public void testVFModule() {
-        VFModule aVFModule = new VFModule();
-        aVFModule.setInvariantUuid("Invariant Uuid");
-        aVFModule.setUuid("Uuid");
-        aVFModule.setMaxInstances(10);
-        aVFModule.setMinInstances(1);
-
-        assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("VFModule Uuid doesn't match", aVFModule.getUuid().equals("Uuid"));
-        assertEquals(aVFModule.getMaxInstances(), 10);
-        assertEquals(aVFModule.getMinInstances(), 1);
+    public void testAttribute() {
+        Attribute attribute = new Attribute();
+        attribute.setName("Attribute");
+        attribute.setValue(Value.adminState);
+        assertTrue("Attribute name is not Attribute", attribute.getName().equals("Attribute"));
+        assertTrue("Attribute value is not adminState", attribute.getValue().equals("adminState"));
     }
+
 }
