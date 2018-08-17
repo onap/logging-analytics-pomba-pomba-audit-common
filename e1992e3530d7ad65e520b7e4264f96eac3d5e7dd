@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_279bbd73",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2931
+      },
+      "writtenOn": "2018-08-17T20:23:05Z",
+      "side": 1,
+      "message": "do you test if it still can generate jococo report after you remove the version for maven-surefire-plugin",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
