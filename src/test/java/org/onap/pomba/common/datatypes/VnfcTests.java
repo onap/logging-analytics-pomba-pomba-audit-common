@@ -15,11 +15,14 @@
  * limitations under the License.
  * ============LICENSE_END=====================================================
  */
+
 package org.onap.pomba.common.datatypes;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+import java.util.List;
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class VnfcTests {
     @Test
@@ -29,9 +32,22 @@ public class VnfcTests {
         aVNFC.setInvariantUuid("Invariant Uuid");
         aVNFC.setUuid("Uuid");
         aVNFC.setNfcNamingCode("NFC Naming Code");
+        DataQuality dataQuality = new DataQuality();
+        dataQuality.setStatus(Status.error);
+        dataQuality.setErrorText("Test");
+        aVNFC.setDataQuality(dataQuality);
+        Attribute attribute = new Attribute();
+        attribute.setName("Attribute");
+        aVNFC.addAttribute(attribute);
         assertTrue("VNFC name doesn't match", aVNFC.getName().equals("VNFC name"));
         assertTrue("VNFC invariant uuid doesn't match", aVNFC.getInvariantUuid().equals("Invariant Uuid"));
         assertTrue("VNFC NFC Naming Code doesn't match", aVNFC.getNfcNamingCode().equals("NFC Naming Code"));
         assertTrue("VNFC uuid doesn't match", aVNFC.getUuid().equals("Uuid"));
+        assertTrue("VNFC data quality status doesn't match", aVNFC.getDataQuality().getStatus().equals(Status.error));
+        assertTrue("VNFC data quality error text doesn't match", aVNFC.getDataQuality().getErrorText().equals("Test"));
+        assertTrue("VNFC attribute name doesn't match", aVNFC.getAttribute().get(0).getName().equals("Attribute"));
+        List<Attribute> attributeList = aVNFC.getAttribute();
+        aVNFC.setAttribute(attributeList);
+        assertEquals(aVNFC.getAttribute().size(), 1);
     }
 }

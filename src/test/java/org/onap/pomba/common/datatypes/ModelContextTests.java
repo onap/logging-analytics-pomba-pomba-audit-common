@@ -15,6 +15,7 @@
  * limitations under the License.
  * ============LICENSE_END=====================================================
  */
+
 package org.onap.pomba.common.datatypes;
 
 import static org.junit.Assert.assertEquals;
@@ -24,8 +25,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class ModelContextTests {
+    @Test
+    public void testModelContext() {
+        ModelContext modelContext = new ModelContext();
+        DataQuality dataQuality = new DataQuality();
+        dataQuality.setStatus(Status.error);
+        dataQuality.setErrorText("Test");
+        modelContext.setDataQuality(dataQuality);
+        assertTrue("ModelContext data quality status doesn't match", modelContext.getDataQuality().getStatus().equals(Status.error));
+        assertTrue("ModelContext data quality error text doesn't match", modelContext.getDataQuality().getErrorText().equals("Test"));
+        Attribute attribute = new Attribute();
+        attribute.setName("Attribute");
+        modelContext.addAttribute(attribute);
+        assertTrue("ModelContext attribute name doesn't match", modelContext.getAttribute().get(0).getName().equals("Attribute"));
+        List<Attribute> attributeList = modelContext.getAttribute();
+        modelContext.setAttribute(attributeList);
+        assertEquals(modelContext.getAttribute().size(), 1);
+    }
+
     @Test
     public void testSetService() {
         ModelContext modelContext = new ModelContext();

@@ -15,13 +15,13 @@
  * limitations under the License.
  * ============LICENSE_END=====================================================
  */
-package org.onap.pomba.common.datatypes;
 
-import java.util.ArrayList;
-import java.util.List;
+package org.onap.pomba.common.datatypes;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModelContext {
 
@@ -29,8 +29,14 @@ public class ModelContext {
     @SerializedName("service")
     private Service service;
     @Expose
-    @SerializedName("vf-list")
-    private List<VF> vf = new ArrayList<>();
+    @SerializedName("dataQuality")
+    private DataQuality dataQuality = new DataQuality();
+    @Expose
+    @SerializedName("attributeList")
+    private List<Attribute> attributeList = new ArrayList<>();
+    @Expose
+    @SerializedName("vfList")
+    private List<VF> vfList = new ArrayList<>();
 
     public Service getService() {
         return service;
@@ -38,13 +44,28 @@ public class ModelContext {
     public void setService(Service service) {
         this.service = service;
     }
-    public List<VF> getVf() {
-        return vf;
+    public DataQuality getDataQuality() {
+        return dataQuality;
     }
-    public void setVf(List<VF> vf) {
-        this.vf = vf;
+    public void setDataQuality(DataQuality dataQuality) {
+        this.dataQuality = dataQuality;
+    }
+    public List<Attribute> getAttribute() {
+        return attributeList;
+    }
+    public void setAttribute(List<Attribute> attributeList) {
+        this.attributeList = attributeList;
+    }
+    public void addAttribute(Attribute attribute) {
+        this.attributeList.add(attribute);
+    }
+    public List<VF> getVf() {
+        return vfList;
+    }
+    public void setVf(List<VF> vfList) {
+        this.vfList = vfList;
     }
     public void addVf(VF vf) {
-        this.vf.add(vf);
+        this.vfList.add(vf);
     }
 }

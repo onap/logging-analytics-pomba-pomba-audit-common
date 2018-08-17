@@ -15,11 +15,14 @@
  * limitations under the License.
  * ============LICENSE_END=====================================================
  */
+
 package org.onap.pomba.common.datatypes;
 
-import org.junit.Test;
-
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import java.util.List;
+import org.junit.Test;
+import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class ServiceTests {
     @Test
@@ -28,9 +31,21 @@ public class ServiceTests {
         aService.setName("new service");
         aService.setInvariantUuid("Invariant Uuid");
         aService.setUuid("Uuid");
-
+        DataQuality dataQuality = new DataQuality();
+        dataQuality.setStatus(Status.error);
+        dataQuality.setErrorText("Test");
+        aService.setDataQuality(dataQuality);
+        Attribute attribute = new Attribute();
+        attribute.setName("Attribute");
+        aService.addAttribute(attribute);
         assertTrue("Service Name doesn't match", aService.getName().equals("new service"));
         assertTrue("Invariant Uuid doesn't match", aService.getInvariantUuid().equals("Invariant Uuid"));
         assertTrue("Uuid doesn't match", aService.getUuid().equals("Uuid"));
+        assertTrue("Service data quality status doesn't match", aService.getDataQuality().getStatus().equals(Status.error));
+        assertTrue("Service data quality error text doesn't match", aService.getDataQuality().getErrorText().equals("Test"));
+        assertTrue("Service attribute name doesn't match", aService.getAttribute().get(0).getName().equals("Attribute"));
+        List<Attribute> attributeList = aService.getAttribute();
+        aService.setAttribute(attributeList);
+        assertEquals(aService.getAttribute().size(), 1);
     }
 }
