@@ -19,6 +19,40 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_1a5e1413",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-18T18:03:13Z",
+      "side": 1,
+      "message": "Should enum be serialized as String?",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_fa6238d7",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-18T18:03:13Z",
+      "side": 1,
+      "message": "Should enums be serialized as Strings?",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_477d991b",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/Service.java",
         "patchSetId": 1
@@ -30,6 +64,24 @@
       "writtenOn": "2018-08-17T20:28:44Z",
       "side": 1,
       "message": "Does this attribute name change in AAI ? I still prefer either invariant-ID or invariantID  not UUID",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_5a648ce4",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Service.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-18T18:03:13Z",
+      "side": 1,
+      "message": "This is based on the Swagger:\nhttps://wiki.onap.org/display/DW/POMBA+Context+Builder+Swagger\nSo we should take it up with Sharon.",
+      "parentUuid": "1a76adc5_477d991b",
       "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
