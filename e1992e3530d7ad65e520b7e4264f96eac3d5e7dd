@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_5a21c3f9",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T16:53:30Z",
+      "side": 1,
+      "message": "Yes, I set it back",
+      "parentUuid": "1a76adc5_279bbd73",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_1a5e1413",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-08-18T18:03:13Z",
       "side": 1,
       "message": "Should enum be serialized as String?",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_5a6d4397",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T16:53:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_1a5e1413",
       "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_7a683f87",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T16:53:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_17d5661b",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_fa6238d7",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_9afafbbb",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T16:53:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_fa6238d7",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_37d8a252",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2018-08-27T13:54:06Z",
       "side": 1,
       "message": "errorText",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_baf577cc",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T16:53:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_37d8a252",
       "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
