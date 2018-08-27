@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_17d5661b",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T13:54:06Z",
+      "side": 1,
+      "message": "dataQuality",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_fa6238d7",
         "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
         "patchSetId": 1
@@ -47,6 +64,23 @@
       "writtenOn": "2018-08-18T18:03:13Z",
       "side": 1,
       "message": "Should enums be serialized as Strings?",
+      "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_37d8a252",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/DataQuality.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-08-27T13:54:06Z",
+      "side": 1,
+      "message": "errorText",
       "revId": "e1992e3530d7ad65e520b7e4264f96eac3d5e7dd",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
