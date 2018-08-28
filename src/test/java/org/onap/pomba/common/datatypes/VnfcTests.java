@@ -22,6 +22,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class VnfcTests {
@@ -37,7 +38,7 @@ public class VnfcTests {
         dataQuality.setErrorText("Test");
         aVNFC.setDataQuality(dataQuality);
         Attribute attribute = new Attribute();
-        attribute.setName("Attribute");
+        attribute.setName(Name.hostName);
         aVNFC.addAttribute(attribute);
         assertTrue("VNFC name doesn't match", aVNFC.getName().equals("VNFC name"));
         assertTrue("VNFC invariant uuid doesn't match", aVNFC.getInvariantUuid().equals("Invariant Uuid"));
@@ -45,9 +46,9 @@ public class VnfcTests {
         assertTrue("VNFC uuid doesn't match", aVNFC.getUuid().equals("Uuid"));
         assertTrue("VNFC data quality status doesn't match", aVNFC.getDataQuality().getStatus().equals(Status.error));
         assertTrue("VNFC data quality error text doesn't match", aVNFC.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("VNFC attribute name doesn't match", aVNFC.getAttribute().get(0).getName().equals("Attribute"));
-        List<Attribute> attributeList = aVNFC.getAttribute();
-        aVNFC.setAttribute(attributeList);
-        assertEquals(aVNFC.getAttribute().size(), 1);
+        assertTrue("VNFC attribute name doesn't match", aVNFC.getAttributes().get(0).getName().equals(Name.hostName));
+        List<Attribute> attributeList = aVNFC.getAttributes();
+        aVNFC.setAttributes(attributeList);
+        assertEquals(aVNFC.getAttributes().size(), 1);
     }
 }

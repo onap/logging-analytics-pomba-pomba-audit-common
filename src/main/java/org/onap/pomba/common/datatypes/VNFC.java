@@ -68,10 +68,10 @@ public class VNFC {
     public void setNfcNamingCode(String nfcType) {
         this.nfcNamingCode = nfcType;
     }
-    public List<Attribute> getAttribute() {
+    public List<Attribute> getAttributes() {
         return attributeList;
     }
-    public void setAttribute(List<Attribute> attributeList) {
+    public void setAttributes(List<Attribute> attributeList) {
         this.attributeList = attributeList;
     }
     public void addAttribute(Attribute attribute) {

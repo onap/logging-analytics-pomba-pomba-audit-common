@@ -24,15 +24,15 @@ import com.google.gson.annotations.SerializedName;
 public class Attribute {
     @Expose
     @SerializedName("name")
-    private String name;
+    private Name name;
     @Expose
     @SerializedName("value")
-    private Value value;
+    private String value;
     @Expose
     @SerializedName("dataQuality")
     private DataQuality dataQuality = new DataQuality();
 
-    public enum Value {
+    public enum Name {
         adminState,
         ipAddress,
         hostName,
@@ -45,16 +45,16 @@ public class Attribute {
         networkRole,
         routerExternalBoolean
     }
-    public String getName() {
+    public Name getName() {
         return name;
     }
-    public void setName(String name) {
+    public void setName(Name name) {
         this.name = name;
     }
-    public Value getValue() {
+    public String getValue() {
         return value;
     }
-    public void setValue(Value value) {
+    public void setValue(String value) {
         this.value = value;
     }
     public DataQuality getDataQuality() {

@@ -22,6 +22,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class VfModuleTests {
@@ -39,7 +40,7 @@ public class VfModuleTests {
         dataQuality.setErrorText("Test");
         aVFModule.setDataQuality(dataQuality);
         Attribute attribute = new Attribute();
-        attribute.setName("Attribute");
+        attribute.setName(Name.hostName);
         aVFModule.addAttribute(attribute);
         assertTrue("VFModule Name doesn't match", aVFModule.getName().equals("Name"));
         assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getInvariantUuid().equals("Invariant Uuid"));
@@ -49,9 +50,25 @@ public class VfModuleTests {
         assertEquals(aVFModule.getMinInstances(), 1);
         assertTrue("VFModule data quality status doesn't match", aVFModule.getDataQuality().getStatus().equals(Status.error));
         assertTrue("VFModule data quality error text doesn't match", aVFModule.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("VFModule attribute name doesn't match", aVFModule.getAttribute().get(0).getName().equals("Attribute"));
-        List<Attribute> attributeList = aVFModule.getAttribute();
-        aVFModule.setAttribute(attributeList);
-        assertEquals(aVFModule.getAttribute().size(), 1);
+        assertTrue("VFModule attribute name doesn't match", aVFModule.getAttributes().get(0).getName().equals(Name.hostName));
+        List<Attribute> attributeList = aVFModule.getAttributes();
+        aVFModule.setAttributes(attributeList);
+        assertEquals(aVFModule.getAttributes().size(), 1);
+        VM vm = new VM();
+        vm.setName("VM");
+        aVFModule.addVm(vm);
+        assertTrue("VFModule vm name doesn't match", aVFModule.getVms().get(0).getName().equals("VM"));
+        List<VM> vmList = aVFModule.getVms();
+        aVFModule.setVms(vmList);
+        assertEquals(aVFModule.getVms().size(), 1);
+        Network network = new Network();
+        network.setName("Network");
+        aVFModule.addNetwork(network);
+        assertTrue("VFModule network name doesn't match", aVFModule.getNetworks().get(0).getName().equals("Network"));
+        List<Network> networkList = aVFModule.getNetworks();
+        aVFModule.setNetworks(networkList);
+        assertEquals(aVFModule.getNetworks().size(), 1);
+
+
     }
 }

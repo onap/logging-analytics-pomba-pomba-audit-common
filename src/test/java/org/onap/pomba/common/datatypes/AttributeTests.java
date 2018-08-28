@@ -21,17 +21,17 @@ package org.onap.pomba.common.datatypes;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import org.onap.pomba.common.datatypes.Attribute.Value;
+import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class AttributeTests {
     @Test
     public void testAttribute() {
         Attribute attribute = new Attribute();
-        attribute.setName("Attribute");
-        attribute.setValue(Value.adminState);
-        assertTrue("Attribute name doesn't match", attribute.getName().equals("Attribute"));
-        assertTrue("Attribute value doesn't match", attribute.getValue().equals(Value.adminState));
+        attribute.setName(Name.hostName);
+        attribute.setValue("Attribute");
+        assertTrue("Attribute name doesn't match", attribute.getName().equals(Name.hostName));
+        assertTrue("Attribute value doesn't match", attribute.getValue().equals("Attribute"));
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");

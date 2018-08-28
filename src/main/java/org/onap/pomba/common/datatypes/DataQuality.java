@@ -49,4 +49,25 @@ public class DataQuality {
     public void setErrorText(String errorText) {
         this.errorText = errorText;
     }
+
+    public static DataQuality ok() {
+        // as a non-mutable class, it is not safe to define a constant for this
+        DataQuality result = new DataQuality();
+        result.setStatus(Status.ok);
+        return result;
+    }
+
+    public static DataQuality error(String text) {
+        // as a non-mutable class, it is not safe to define a constant for this
+        DataQuality result = new DataQuality();
+        result.setStatus(Status.error);
+        result.setErrorText(text);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "DataQuality [status=" + this.status + ", errorText=" + this.errorText + "]";
+    }
+
 }

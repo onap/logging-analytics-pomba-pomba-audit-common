@@ -52,7 +52,7 @@ public class VF {
     private List<VFModule> vfModules = new ArrayList<>();
     @Expose
     @SerializedName("vnfcList")
-    private List<VNFC> vnfc = new ArrayList<>();
+    private List<VNFC> vnfcs = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -93,19 +93,19 @@ public class VF {
     public void addVfModule(VFModule vfModule) {
         this.vfModules.add(vfModule);
     }
-    public List<VNFC> getVnfc() {
-        return vnfc;
+    public List<VNFC> getVnfcs() {
+        return vnfcs;
     }
-    public void setVnfc(List<VNFC> vnfc) {
-        this.vnfc = vnfc;
+    public void setVnfcs(List<VNFC> vnfc) {
+        this.vnfcs = vnfc;
     }
     public void addVnfc(VNFC vnfc) {
-        this.vnfc.add(vnfc);
+        this.vnfcs.add(vnfc);
     }
-    public List<Attribute> getAttribute() {
+    public List<Attribute> getAttributes() {
         return attributeList;
     }
-    public void setAttribute(List<Attribute> attributeList) {
+    public void setAttributes(List<Attribute> attributeList) {
         this.attributeList = attributeList;
     }
     public void addAttribute(Attribute attribute) {

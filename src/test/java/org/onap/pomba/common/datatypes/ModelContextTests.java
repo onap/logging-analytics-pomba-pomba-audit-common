@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class ModelContextTests {
@@ -38,12 +39,12 @@ public class ModelContextTests {
         assertTrue("ModelContext data quality status doesn't match", modelContext.getDataQuality().getStatus().equals(Status.error));
         assertTrue("ModelContext data quality error text doesn't match", modelContext.getDataQuality().getErrorText().equals("Test"));
         Attribute attribute = new Attribute();
-        attribute.setName("Attribute");
+        attribute.setName(Name.hostName);
         modelContext.addAttribute(attribute);
-        assertTrue("ModelContext attribute name doesn't match", modelContext.getAttribute().get(0).getName().equals("Attribute"));
-        List<Attribute> attributeList = modelContext.getAttribute();
-        modelContext.setAttribute(attributeList);
-        assertEquals(modelContext.getAttribute().size(), 1);
+        assertTrue("ModelContext attribute name doesn't match", modelContext.getAttributes().get(0).getName().equals(Name.hostName));
+        List<Attribute> attributeList = modelContext.getAttributes();
+        modelContext.setAttributes(attributeList);
+        assertEquals(modelContext.getAttributes().size(), 1);
     }
 
     @Test
@@ -63,8 +64,8 @@ public class ModelContextTests {
         VF aVF = new VF();
         aVF.setName("VF name");
         vfList.add(aVF);
-        modelContext.setVf(vfList);
-        assertEquals(modelContext.getVf().size(), 1);
+        modelContext.setVfs(vfList);
+        assertEquals(modelContext.getVfs().size(), 1);
     }
 
     @Test
@@ -73,8 +74,8 @@ public class ModelContextTests {
         VF aVF = new VF();
         aVF.setName("VF name");
         modelContext.addVf(aVF);
-        assertEquals(modelContext.getVf().size(), 1);
-        assertTrue("ModelContext VF name doesn't match", modelContext.getVf().get(0).getName().equals("VF name"));
+        assertEquals(modelContext.getVfs().size(), 1);
+        assertTrue("ModelContext VF name doesn't match", modelContext.getVfs().get(0).getName().equals("VF name"));
     }
 
 }

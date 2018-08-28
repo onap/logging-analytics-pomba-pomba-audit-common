@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
 public class VfTests {
@@ -41,7 +42,7 @@ public class VfTests {
         dataQuality.setErrorText("Test");
         aVF.setDataQuality(dataQuality);
         Attribute attribute = new Attribute();
-        attribute.setName("Attribute");
+        attribute.setName(Name.hostName);
         aVF.addAttribute(attribute);
         assertTrue("VF name doesn't match", aVF.getName().equals("VF name"));
         assertTrue("VF Type doesn't match", aVF.getType().equals("Type"));
@@ -50,10 +51,10 @@ public class VfTests {
         assertTrue("VF NF Naming Code doesn't match", aVF.getNfNamingCode().equals("NF Naming Code"));
         assertTrue("VF data quality status doesn't match", aVF.getDataQuality().getStatus().equals(Status.error));
         assertTrue("VF data quality error text doesn't match", aVF.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("VF attribute name doesn't match", aVF.getAttribute().get(0).getName().equals("Attribute"));
-        List<Attribute> attributeList = aVF.getAttribute();
-        aVF.setAttribute(attributeList);
-        assertEquals(aVF.getAttribute().size(), 1);
+        assertTrue("VF attribute name doesn't match", aVF.getAttributes().get(0).getName().equals(Name.hostName));
+        List<Attribute> attributeList = aVF.getAttributes();
+        aVF.setAttributes(attributeList);
+        assertEquals(aVF.getAttributes().size(), 1);
     }
 
     @Test
@@ -111,17 +112,17 @@ public class VfTests {
         VNFC aVNFC = new VNFC();
         aVNFC.setName("VNFC name");
         vnfcList.add(aVNFC);
-        aVF.setVnfc(vnfcList);
-        assertTrue("VNFC list item doesn't match", aVF.getVnfc().get(0).getName().equals("VNFC name"));
+        aVF.setVnfcs(vnfcList);
+        assertTrue("VNFC list item doesn't match", aVF.getVnfcs().get(0).getName().equals("VNFC name"));
     }
 
     @Test
     public void testAddVnfc() {
         VF aVF = new VF();
-        assertEquals(aVF.getVnfc().size(), 0);
+        assertEquals(aVF.getVnfcs().size(), 0);
         VNFC aVNFC = new VNFC();
         aVNFC.setName("VNFC name");
         aVF.addVnfc(aVNFC);
-        assertTrue("VNFC list item doesn't match", aVF.getVnfc().get(0).getName().equals("VNFC name"));
+        assertTrue("VNFC list item doesn't match", aVF.getVnfcs().get(0).getName().equals("VNFC name"));
     }
 }

@@ -25,28 +25,31 @@ import org.junit.Test;
 import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
-public class ServiceTests {
+public class NetworkTests {
     @Test
-    public void testService() {
-        Service aService = new Service();
-        aService.setName("new service");
-        aService.setInvariantUuid("Invariant Uuid");
-        aService.setUuid("Uuid");
+    public void testNetwork() {
+        Network aNetwork = new Network();
+        aNetwork.setName("Network name");
+        aNetwork.setInvariantUuid("Invariant Uuid");
+        aNetwork.setUuid("Uuid");
+        aNetwork.setNfcNamingCode("NFC Naming Code");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
-        aService.setDataQuality(dataQuality);
+        aNetwork.setDataQuality(dataQuality);
         Attribute attribute = new Attribute();
         attribute.setName(Name.hostName);
-        aService.addAttribute(attribute);
-        assertTrue("Service Name doesn't match", aService.getName().equals("new service"));
-        assertTrue("Invariant Uuid doesn't match", aService.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("Uuid doesn't match", aService.getUuid().equals("Uuid"));
-        assertTrue("Service data quality status doesn't match", aService.getDataQuality().getStatus().equals(Status.error));
-        assertTrue("Service data quality error text doesn't match", aService.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("Service attribute name doesn't match", aService.getAttributes().get(0).getName().equals(Name.hostName));
-        List<Attribute> attributeList = aService.getAttributes();
-        aService.setAttributes(attributeList);
-        assertEquals(aService.getAttributes().size(), 1);
+        aNetwork.addAttribute(attribute);
+        assertTrue("Network name doesn't match", aNetwork.getName().equals("Network name"));
+        assertTrue("Network invariant uuid doesn't match", aNetwork.getInvariantUuid().equals("Invariant Uuid"));
+        assertTrue("Network NFC Naming Code doesn't match", aNetwork.getNfcNamingCode().equals("NFC Naming Code"));
+        assertTrue("Network uuid doesn't match", aNetwork.getUuid().equals("Uuid"));
+        assertTrue("Network data quality status doesn't match", aNetwork.getDataQuality().getStatus().equals(Status.error));
+        assertTrue("Network data quality error text doesn't match", aNetwork.getDataQuality().getErrorText().equals("Test"));
+        assertTrue("Network attribute name doesn't match", aNetwork.getAttributes().get(0).getName().equals(Name.hostName));
+        List<Attribute> attributeList = aNetwork.getAttributes();
+        aNetwork.setAttributes(attributeList);
+        assertEquals(aNetwork.getAttributes().size(), 1);
     }
+
 }

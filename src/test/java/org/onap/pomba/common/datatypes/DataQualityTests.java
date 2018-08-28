@@ -18,6 +18,8 @@
 
 package org.onap.pomba.common.datatypes;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -33,5 +35,17 @@ public class DataQualityTests {
         dataQuality.setErrorText("Test");
         assertTrue("DataQuality status doesn't match", dataQuality.getStatus().equals(Status.error));
         assertTrue("DataQuality error text doesn't match", dataQuality.getErrorText().equals("Test"));
+    }
+
+    @Test
+    public void dataQualityHelpers() {
+        DataQuality dataQuality = DataQuality.ok();
+        assertEquals(DataQuality.Status.ok, dataQuality.getStatus());
+        assertNull(dataQuality.getErrorText());
+
+        dataQuality = DataQuality.error("test");
+        assertEquals(DataQuality.Status.error, dataQuality.getStatus());
+        assertEquals("test", dataQuality.getErrorText());
+        assertTrue(dataQuality.toString().contains("test"));
     }
 }

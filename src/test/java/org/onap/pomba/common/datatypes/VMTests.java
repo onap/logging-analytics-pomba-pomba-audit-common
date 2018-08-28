@@ -25,28 +25,31 @@ import org.junit.Test;
 import org.onap.pomba.common.datatypes.Attribute.Name;
 import org.onap.pomba.common.datatypes.DataQuality.Status;
 
-public class ServiceTests {
+public class VMTests {
     @Test
-    public void testService() {
-        Service aService = new Service();
-        aService.setName("new service");
-        aService.setInvariantUuid("Invariant Uuid");
-        aService.setUuid("Uuid");
+    public void testVM() {
+        VM aVM = new VM();
+        aVM.setName("VM name");
+        aVM.setInvariantUuid("Invariant Uuid");
+        aVM.setUuid("Uuid");
+        aVM.setNfcNamingCode("NFC Naming Code");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
-        aService.setDataQuality(dataQuality);
+        aVM.setDataQuality(dataQuality);
         Attribute attribute = new Attribute();
         attribute.setName(Name.hostName);
-        aService.addAttribute(attribute);
-        assertTrue("Service Name doesn't match", aService.getName().equals("new service"));
-        assertTrue("Invariant Uuid doesn't match", aService.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("Uuid doesn't match", aService.getUuid().equals("Uuid"));
-        assertTrue("Service data quality status doesn't match", aService.getDataQuality().getStatus().equals(Status.error));
-        assertTrue("Service data quality error text doesn't match", aService.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("Service attribute name doesn't match", aService.getAttributes().get(0).getName().equals(Name.hostName));
-        List<Attribute> attributeList = aService.getAttributes();
-        aService.setAttributes(attributeList);
-        assertEquals(aService.getAttributes().size(), 1);
+        aVM.addAttribute(attribute);
+        assertTrue("VM name doesn't match", aVM.getName().equals("VM name"));
+        assertTrue("VM invariant uuid doesn't match", aVM.getInvariantUuid().equals("Invariant Uuid"));
+        assertTrue("VM NFC Naming Code doesn't match", aVM.getNfcNamingCode().equals("NFC Naming Code"));
+        assertTrue("VM uuid doesn't match", aVM.getUuid().equals("Uuid"));
+        assertTrue("VM data quality status doesn't match", aVM.getDataQuality().getStatus().equals(Status.error));
+        assertTrue("VM data quality error text doesn't match", aVM.getDataQuality().getErrorText().equals("Test"));
+        assertTrue("VM attribute name doesn't match", aVM.getAttributes().get(0).getName().equals(Name.hostName));
+        List<Attribute> attributeList = aVM.getAttributes();
+        aVM.setAttributes(attributeList);
+        assertEquals(aVM.getAttributes().size(), 1);
     }
+
 }

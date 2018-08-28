@@ -65,10 +65,10 @@ public class Service {
     public void setDataQuality(DataQuality dataQuality) {
         this.dataQuality = dataQuality;
     }
-    public List<Attribute> getAttribute() {
+    public List<Attribute> getAttributes() {
         return attributeList;
     }
-    public void setAttribute(List<Attribute> attributeList) {
+    public void setAttributes(List<Attribute> attributeList) {
         this.attributeList = attributeList;
     }
     public void addAttribute(Attribute attribute) {

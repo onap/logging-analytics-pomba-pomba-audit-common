@@ -23,32 +23,49 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModelContext {
-
+public class Network {
     @Expose
-    @SerializedName("service")
-    private Service service;
+    @SerializedName("name")
+    private String name;
+    @Expose
+    @SerializedName("invariantUUID")
+    private String invariantUuid;
+    @Expose
+    @SerializedName("uuid")
+    private String uuid;
+    @Expose
+    @SerializedName("nfNamingCode")
+    private String nfcNamingCode;
     @Expose
     @SerializedName("dataQuality")
     private DataQuality dataQuality = new DataQuality();
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
-    @Expose
-    @SerializedName("vfList")
-    private List<VF> vfList = new ArrayList<>();
 
-    public Service getService() {
-        return service;
+    public String getName() {
+        return name;
     }
-    public void setService(Service service) {
-        this.service = service;
+    public void setName(String name) {
+        this.name = name;
     }
-    public DataQuality getDataQuality() {
-        return dataQuality;
+    public String getInvariantUuid() {
+        return invariantUuid;
     }
-    public void setDataQuality(DataQuality dataQuality) {
-        this.dataQuality = dataQuality;
+    public void setInvariantUuid(String invariantUuid) {
+        this.invariantUuid = invariantUuid;
+    }
+    public String getUuid() {
+        return uuid;
+    }
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+    public String getNfcNamingCode() {
+        return nfcNamingCode;
+    }
+    public void setNfcNamingCode(String nfcType) {
+        this.nfcNamingCode = nfcType;
     }
     public List<Attribute> getAttributes() {
         return attributeList;
@@ -59,13 +76,11 @@ public class ModelContext {
     public void addAttribute(Attribute attribute) {
         this.attributeList.add(attribute);
     }
-    public List<VF> getVfs() {
-        return vfList;
+    public DataQuality getDataQuality() {
+        return dataQuality;
     }
-    public void setVfs(List<VF> vfList) {
-        this.vfList = vfList;
+    public void setDataQuality(DataQuality dataQuality) {
+        this.dataQuality = dataQuality;
     }
-    public void addVf(VF vf) {
-        this.vfList.add(vf);
-    }
+
 }

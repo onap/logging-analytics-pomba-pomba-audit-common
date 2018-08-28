@@ -49,6 +49,12 @@ public class VFModule {
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
+    @Expose
+    @SerializedName("vmList")
+    private List<VM> vms = new ArrayList<>();
+    @Expose
+    @SerializedName("networkList")
+    private List<Network> networks = new ArrayList<>();
 
 
     public String getName() {
@@ -87,10 +93,28 @@ public class VFModule {
     public void setMinInstances(int minInstances) {
         this.minInstances = minInstances;
     }
-    public List<Attribute> getAttribute() {
+    public List<VM> getVms() {
+        return vms;
+    }
+    public void setVms(List<VM> vms) {
+        this.vms = vms;
+    }
+    public void addVm(VM vm) {
+        this.vms.add(vm);
+    }
+    public List<Network> getNetworks() {
+        return networks;
+    }
+    public void setNetworks(List<Network> network) {
+        this.networks = network;
+    }
+    public void addNetwork(Network vnfc) {
+        this.networks.add(vnfc);
+    }
+    public List<Attribute> getAttributes() {
         return attributeList;
     }
-    public void setAttribute(List<Attribute> attributeList) {
+    public void setAttributes(List<Attribute> attributeList) {
         this.attributeList = attributeList;
     }
     public void addAttribute(Attribute attribute) {
