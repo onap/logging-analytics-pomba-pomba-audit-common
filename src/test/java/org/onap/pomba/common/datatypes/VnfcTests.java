@@ -32,7 +32,7 @@ public class VnfcTests {
         aVNFC.setName("VNFC name");
         aVNFC.setInvariantUuid("Invariant Uuid");
         aVNFC.setUuid("Uuid");
-        aVNFC.setNfcNamingCode("NFC Naming Code");
+        aVNFC.setType("Type");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
@@ -42,8 +42,8 @@ public class VnfcTests {
         aVNFC.addAttribute(attribute);
         assertTrue("VNFC name doesn't match", aVNFC.getName().equals("VNFC name"));
         assertTrue("VNFC invariant uuid doesn't match", aVNFC.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("VNFC NFC Naming Code doesn't match", aVNFC.getNfcNamingCode().equals("NFC Naming Code"));
         assertTrue("VNFC uuid doesn't match", aVNFC.getUuid().equals("Uuid"));
+        assertTrue("VNFC type doesn't match", aVNFC.getType().equals("Type"));
         assertTrue("VNFC data quality status doesn't match", aVNFC.getDataQuality().getStatus().equals(Status.error));
         assertTrue("VNFC data quality error text doesn't match", aVNFC.getDataQuality().getErrorText().equals("Test"));
         assertTrue("VNFC attribute name doesn't match", aVNFC.getAttributes().get(0).getName().equals(Name.hostName));

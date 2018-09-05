@@ -34,11 +34,11 @@ public class Network {
     @SerializedName("uuid")
     private String uuid;
     @Expose
-    @SerializedName("nfNamingCode")
-    private String nfcNamingCode;
+    @SerializedName("type")
+    private String type;
     @Expose
     @SerializedName("dataQuality")
-    private DataQuality dataQuality = new DataQuality();
+    private DataQuality dataQuality = DataQuality.ok();
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
@@ -61,11 +61,11 @@ public class Network {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
-    public String getNfcNamingCode() {
-        return nfcNamingCode;
+    public String getType() {
+        return type;
     }
-    public void setNfcNamingCode(String nfcType) {
-        this.nfcNamingCode = nfcType;
+    public void setType(String type) {
+        this.type = type;
     }
     public List<Attribute> getAttributes() {
         return attributeList;

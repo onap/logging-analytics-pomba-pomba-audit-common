@@ -32,7 +32,6 @@ public class VfModuleTests {
         aVFModule.setName("Name");
         aVFModule.setInvariantUuid("Invariant Uuid");
         aVFModule.setUuid("Uuid");
-        aVFModule.setNfNamingCode("Nf Naming Code");
         aVFModule.setMaxInstances(10);
         aVFModule.setMinInstances(1);
         DataQuality dataQuality = new DataQuality();
@@ -45,7 +44,6 @@ public class VfModuleTests {
         assertTrue("VFModule Name doesn't match", aVFModule.getName().equals("Name"));
         assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getInvariantUuid().equals("Invariant Uuid"));
         assertTrue("VFModule Uuid doesn't match", aVFModule.getUuid().equals("Uuid"));
-        assertTrue("VFModule Nf Naming Code doesn't match", aVFModule.getNfNamingCode().equals("Nf Naming Code"));
         assertEquals(aVFModule.getMaxInstances(), 10);
         assertEquals(aVFModule.getMinInstances(), 1);
         assertTrue("VFModule data quality status doesn't match", aVFModule.getDataQuality().getStatus().equals(Status.error));

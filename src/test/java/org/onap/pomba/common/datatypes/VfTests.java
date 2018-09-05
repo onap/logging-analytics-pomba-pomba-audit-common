@@ -36,7 +36,6 @@ public class VfTests {
         aVF.setType("Type");
         aVF.setInvariantUuid("Invariant Uuid");
         aVF.setUuid("Uuid");
-        aVF.setNfNamingCode("NF Naming Code");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
@@ -48,7 +47,6 @@ public class VfTests {
         assertTrue("VF Type doesn't match", aVF.getType().equals("Type"));
         assertTrue("VF Invariant Uuid doesn't match", aVF.getInvariantUuid().equals("Invariant Uuid"));
         assertTrue("VF Uuid doesn't match", aVF.getUuid().equals("Uuid"));
-        assertTrue("VF NF Naming Code doesn't match", aVF.getNfNamingCode().equals("NF Naming Code"));
         assertTrue("VF data quality status doesn't match", aVF.getDataQuality().getStatus().equals(Status.error));
         assertTrue("VF data quality error text doesn't match", aVF.getDataQuality().getErrorText().equals("Test"));
         assertTrue("VF attribute name doesn't match", aVF.getAttributes().get(0).getName().equals(Name.hostName));

@@ -35,9 +35,6 @@ public class VFModule {
     @SerializedName("uuid")
     private String uuid;
     @Expose
-    @SerializedName("nfNamingCode")
-    private String nfNamingCode;
-    @Expose
     @SerializedName("maxInstances")
     private int maxInstances;
     @Expose
@@ -45,7 +42,7 @@ public class VFModule {
     private int minInstances;
     @Expose
     @SerializedName("dataQuality")
-    private DataQuality dataQuality = new DataQuality();
+    private DataQuality dataQuality = DataQuality.ok();
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
@@ -74,12 +71,6 @@ public class VFModule {
     }
     public void setUuid(String uuid) {
         this.uuid = uuid;
-    }
-    public String getNfNamingCode() {
-        return nfNamingCode;
-    }
-    public void setNfNamingCode(String nfNamingCode) {
-        this.nfNamingCode = nfNamingCode;
     }
     public int getMaxInstances() {
         return maxInstances;

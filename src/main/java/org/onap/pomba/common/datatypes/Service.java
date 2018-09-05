@@ -36,7 +36,7 @@ public class Service {
     private String uuid;
     @Expose
     @SerializedName("dataQuality")
-    private DataQuality dataQuality = new DataQuality();
+    private DataQuality dataQuality = DataQuality.ok();
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();

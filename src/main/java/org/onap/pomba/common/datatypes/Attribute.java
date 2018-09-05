@@ -30,7 +30,7 @@ public class Attribute {
     private String value;
     @Expose
     @SerializedName("dataQuality")
-    private DataQuality dataQuality = new DataQuality();
+    private DataQuality dataQuality = DataQuality.ok();
 
     public enum Name {
         adminState,
@@ -43,7 +43,8 @@ public class Attribute {
         physicalNetworkName,
         sharedNetworkBoolean,
         networkRole,
-        routerExternalBoolean
+        routerExternalBoolean,
+        imageId
     }
     public Name getName() {
         return name;
