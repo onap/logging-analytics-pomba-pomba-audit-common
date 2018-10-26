@@ -26,17 +26,17 @@ import java.util.List;
 public class VNFC {
 
     @Expose
-    @SerializedName("name")
-    private String name;
-    @Expose
-    @SerializedName("invariantUUID")
-    private String invariantUuid;
-    @Expose
     @SerializedName("uuid")
     private String uuid;
     @Expose
-    @SerializedName("type")
-    private String type;
+    @SerializedName("name")
+    private String name;
+    @Expose
+    @SerializedName("modelVersionID")
+    private String modelVersionID;
+    @Expose
+    @SerializedName("modelInvariantUUID")
+    private String modelInvariantUUID;
     @Expose
     @SerializedName("dataQuality")
     private DataQuality dataQuality = DataQuality.ok();
@@ -50,23 +50,11 @@ public class VNFC {
     public void setName(String name) {
         this.name = name;
     }
-    public String getInvariantUuid() {
-        return invariantUuid;
-    }
-    public void setInvariantUuid(String invariantUuid) {
-        this.invariantUuid = invariantUuid;
-    }
     public String getUuid() {
         return uuid;
     }
     public void setUuid(String uuid) {
         this.uuid = uuid;
-    }
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
     }
     public List<Attribute> getAttributes() {
         return attributeList;
@@ -83,4 +71,19 @@ public class VNFC {
     public void setDataQuality(DataQuality dataQuality) {
         this.dataQuality = dataQuality;
     }
+    public String getModelVersionID() {
+        return modelVersionID;
+    }
+    public void setModelVersionID(String modelVersionID) {
+        this.modelVersionID = modelVersionID;
+    }
+
+    public String getModelInvariantUUID() {
+        return modelInvariantUUID;
+    }
+
+    public void setModelInvariantUUID(String modelInvariantUUID) {
+        this.modelInvariantUUID = modelInvariantUUID;
+    }
+
 }

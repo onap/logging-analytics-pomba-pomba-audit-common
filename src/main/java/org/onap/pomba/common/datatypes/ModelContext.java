@@ -20,9 +20,13 @@ package org.onap.pomba.common.datatypes;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@ApiModel(value="ModelContext")
 public class ModelContext {
 
     @Expose
@@ -35,21 +39,30 @@ public class ModelContext {
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
     @Expose
-    @SerializedName("vfList")
-    private List<VF> vfList = new ArrayList<>();
+    @SerializedName("vnfList")
+    private List<VNF> vnfList = new ArrayList<>();
+    @Expose
+    @SerializedName("pnfList")
+    private List<PNF> pnfList = new ArrayList<>();
+    @Expose
+    @SerializedName("networkList")
+    private List<Network> networkList = new ArrayList<>();
 
+    @ApiModelProperty(value = "Service object of the model")
     public Service getService() {
         return service;
     }
     public void setService(Service service) {
         this.service = service;
     }
+    @ApiModelProperty(value = "Data Quality indicator")
     public DataQuality getDataQuality() {
         return dataQuality;
     }
     public void setDataQuality(DataQuality dataQuality) {
         this.dataQuality = dataQuality;
     }
+    @ApiModelProperty(value = "List of attributes")
     public List<Attribute> getAttributes() {
         return attributeList;
     }
@@ -59,13 +72,31 @@ public class ModelContext {
     public void addAttribute(Attribute attribute) {
         this.attributeList.add(attribute);
     }
-    public List<VF> getVfs() {
-        return vfList;
+    @ApiModelProperty(value = "List of VNF associated with the service instance")
+    public List<VNF> getVnfs() {
+        return vnfList;
     }
-    public void setVfs(List<VF> vfList) {
-        this.vfList = vfList;
+    public void setVnfs(List<VNF> vfList) {
+        this.vnfList = vfList;
     }
-    public void addVf(VF vf) {
-        this.vfList.add(vf);
+    public void addVf(VNF vf) {
+        this.vnfList.add(vf);
     }
+    @ApiModelProperty(value = "List of PNF associated with the service instance")
+    public List<PNF> getPnfs() {
+        return pnfList;
+    }
+    public void setPnfs(List<PNF> pnfList) {
+        this.pnfList = pnfList;
+    }
+    public void addPnf(PNF pnf) {
+        this.pnfList.add(pnf);
+    }
+    @ApiModelProperty(value = "List of networks associated with the service instance")
+    public List<Network> getNetworkList() { return networkList; }
+    public void setNetworkList(List<Network> networkList) { this.networkList = networkList; }
+    public void addNetwork(Network network) {
+        this.networkList.add(network);
+    }
+
 }

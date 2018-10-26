@@ -20,6 +20,7 @@ package org.onap.pomba.common.datatypes;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
 
 public class Attribute {
     @Expose
@@ -33,7 +34,7 @@ public class Attribute {
     private DataQuality dataQuality = DataQuality.ok();
 
     public enum Name {
-        adminState,
+        adminStatus,
         ipAddress,
         hostName,
         lockedBoolean,
@@ -44,20 +45,49 @@ public class Attribute {
         sharedNetworkBoolean,
         networkRole,
         routerExternalBoolean,
-        imageId
+        imageId,
+        nfNamingCode,
+        nfType,
+        nfRole,
+        nfFunction,
+        nfcNamingCode,
+        nfcNamingTypen,
+        name2,
+        equipType,
+        equipVendor,
+        equipModel,
+        swVesrion,
+        serialNumber,
+        provStatus,
+        fqdn,
+        interfaceRole,
+        interfaceType,
+        speedValue,
+        speedUnits,
+        portDescription,
+        circuitId,
+        linkType,
+        routingProtocol,
+        networkName,
+        isPortMirrored
     }
+    @ApiModelProperty(value = "Name of the attribute")
     public Name getName() {
         return name;
     }
     public void setName(Name name) {
         this.name = name;
     }
+
+    @ApiModelProperty(value = "Value of the attribute")
     public String getValue() {
         return value;
     }
     public void setValue(String value) {
         this.value = value;
     }
+
+    @ApiModelProperty(value = "Data Quality indicator of the attribute")
     public DataQuality getDataQuality() {
         return dataQuality;
     }

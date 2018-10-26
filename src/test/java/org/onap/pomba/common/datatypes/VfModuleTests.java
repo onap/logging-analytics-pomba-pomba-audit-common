@@ -30,7 +30,7 @@ public class VfModuleTests {
     public void testVFModule() {
         VFModule aVFModule = new VFModule();
         aVFModule.setName("Name");
-        aVFModule.setInvariantUuid("Invariant Uuid");
+        aVFModule.setModelInvariantUUID("Invariant Uuid");
         aVFModule.setUuid("Uuid");
         aVFModule.setMaxInstances(10);
         aVFModule.setMinInstances(1);
@@ -42,7 +42,7 @@ public class VfModuleTests {
         attribute.setName(Name.hostName);
         aVFModule.addAttribute(attribute);
         assertTrue("VFModule Name doesn't match", aVFModule.getName().equals("Name"));
-        assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getInvariantUuid().equals("Invariant Uuid"));
+        assertTrue("VFModule Invariant Uuid doesn't match", aVFModule.getModelInvariantUUID().equals("Invariant Uuid"));
         assertTrue("VFModule Uuid doesn't match", aVFModule.getUuid().equals("Uuid"));
         assertEquals(aVFModule.getMaxInstances(), 10);
         assertEquals(aVFModule.getMinInstances(), 1);

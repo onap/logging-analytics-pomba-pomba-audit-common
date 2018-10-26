@@ -30,23 +30,16 @@ public class ServiceTests {
     public void testService() {
         Service aService = new Service();
         aService.setName("new service");
-        aService.setInvariantUuid("Invariant Uuid");
+        aService.setModelInvariantUUID("Invariant Uuid");
         aService.setUuid("Uuid");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
         aService.setDataQuality(dataQuality);
-        Attribute attribute = new Attribute();
-        attribute.setName(Name.hostName);
-        aService.addAttribute(attribute);
         assertTrue("Service Name doesn't match", aService.getName().equals("new service"));
-        assertTrue("Invariant Uuid doesn't match", aService.getInvariantUuid().equals("Invariant Uuid"));
+        assertTrue("Invariant Uuid doesn't match", aService.getModelInvariantUUID().equals("Invariant Uuid"));
         assertTrue("Uuid doesn't match", aService.getUuid().equals("Uuid"));
         assertTrue("Service data quality status doesn't match", aService.getDataQuality().getStatus().equals(Status.error));
         assertTrue("Service data quality error text doesn't match", aService.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("Service attribute name doesn't match", aService.getAttributes().get(0).getName().equals(Name.hostName));
-        List<Attribute> attributeList = aService.getAttributes();
-        aService.setAttributes(attributeList);
-        assertEquals(aService.getAttributes().size(), 1);
     }
 }

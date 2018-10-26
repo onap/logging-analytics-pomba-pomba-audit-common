@@ -25,23 +25,26 @@ import java.util.List;
 
 public class Network {
     @Expose
-    @SerializedName("name")
-    private String name;
-    @Expose
-    @SerializedName("invariantUUID")
-    private String invariantUuid;
-    @Expose
     @SerializedName("uuid")
     private String uuid;
     @Expose
-    @SerializedName("type")
-    private String type;
+    @SerializedName("name")
+    private String name;
+    @Expose
+    @SerializedName("modelVersionID")
+    private String modelVersionID;
+    @Expose
+    @SerializedName("modelInvariantUUID")
+    private String modelInvariantUUID;
     @Expose
     @SerializedName("dataQuality")
     private DataQuality dataQuality = DataQuality.ok();
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
+    @Expose
+    @SerializedName("networkPolicyList")
+    private List<NetworkPolicy> networkPolicies = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -49,23 +52,11 @@ public class Network {
     public void setName(String name) {
         this.name = name;
     }
-    public String getInvariantUuid() {
-        return invariantUuid;
-    }
-    public void setInvariantUuid(String invariantUuid) {
-        this.invariantUuid = invariantUuid;
-    }
     public String getUuid() {
         return uuid;
     }
     public void setUuid(String uuid) {
         this.uuid = uuid;
-    }
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
     }
     public List<Attribute> getAttributes() {
         return attributeList;
@@ -81,6 +72,24 @@ public class Network {
     }
     public void setDataQuality(DataQuality dataQuality) {
         this.dataQuality = dataQuality;
+    }
+    public String getModelVersionID() { return modelVersionID; }
+    public void setModelVersionID(String modelVersionID) { this.modelVersionID = modelVersionID; }
+
+    public List<NetworkPolicy> getNetworkPolicies() {
+        return networkPolicies;
+    }
+
+    public void setNetworkPolicies(List<NetworkPolicy> networkPolicies) {
+        this.networkPolicies = networkPolicies;
+    }
+
+    public String getModelInvariantUUID() {
+        return modelInvariantUUID;
+    }
+
+    public void setModelInvariantUUID(String modelInvariantUUID) {
+        this.modelInvariantUUID = modelInvariantUUID;
     }
 
 }
