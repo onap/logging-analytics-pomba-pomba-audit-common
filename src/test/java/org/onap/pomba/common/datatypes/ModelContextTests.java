@@ -60,22 +60,22 @@ public class ModelContextTests {
     @Test
     public void testSetVf() {
         ModelContext modelContext = new ModelContext();
-        List<VF> vfList = new ArrayList<VF>();
-        VF aVF = new VF();
+        List<VNF> vfList = new ArrayList<VNF>();
+        VNF aVF = new VNF();
         aVF.setName("VF name");
         vfList.add(aVF);
-        modelContext.setVfs(vfList);
-        assertEquals(modelContext.getVfs().size(), 1);
+        modelContext.setVnfs(vfList);
+        assertEquals(modelContext.getVnfs().size(), 1);
     }
 
     @Test
     public void testAddVf() {
         ModelContext modelContext = new ModelContext();
-        VF aVF = new VF();
+        VNF aVF = new VNF();
         aVF.setName("VF name");
         modelContext.addVf(aVF);
-        assertEquals(modelContext.getVfs().size(), 1);
-        assertTrue("ModelContext VF name doesn't match", modelContext.getVfs().get(0).getName().equals("VF name"));
+        assertEquals(modelContext.getVnfs().size(), 1);
+        assertTrue("ModelContext VF name doesn't match", modelContext.getVnfs().get(0).getName().equals("VF name"));
     }
 
 }

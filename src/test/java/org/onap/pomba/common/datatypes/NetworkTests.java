@@ -32,7 +32,6 @@ public class NetworkTests {
         aNetwork.setName("Network name");
         aNetwork.setInvariantUuid("Invariant Uuid");
         aNetwork.setUuid("Uuid");
-        aNetwork.setType("Type");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
@@ -43,7 +42,6 @@ public class NetworkTests {
         assertTrue("Network name doesn't match", aNetwork.getName().equals("Network name"));
         assertTrue("Network invariant uuid doesn't match", aNetwork.getInvariantUuid().equals("Invariant Uuid"));
         assertTrue("Network uuid doesn't match", aNetwork.getUuid().equals("Uuid"));
-        assertTrue("Network type doesn't match", aNetwork.getType().equals("Type"));
         assertTrue("Network data quality status doesn't match", aNetwork.getDataQuality().getStatus().equals(Status.error));
         assertTrue("Network data quality error text doesn't match", aNetwork.getDataQuality().getErrorText().equals("Test"));
         assertTrue("Network attribute name doesn't match", aNetwork.getAttributes().get(0).getName().equals(Name.hostName));

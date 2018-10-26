@@ -28,20 +28,20 @@ public class VM {
     @SerializedName("name")
     private String name;
     @Expose
-    @SerializedName("invariantUUID")
-    private String invariantUuid;
-    @Expose
     @SerializedName("uuid")
     private String uuid;
-    @Expose
-    @SerializedName("nfNamingCode")
-    private String nfcNamingCode;
     @Expose
     @SerializedName("dataQuality")
     private DataQuality dataQuality = DataQuality.ok();
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
+    @Expose
+    @SerializedName("pServer")
+    private Pserver pServer = new Pserver();
+    @Expose
+    @SerializedName("lInterfaceList")
+    private List<LInterface> lInterfaceList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -49,23 +49,11 @@ public class VM {
     public void setName(String name) {
         this.name = name;
     }
-    public String getInvariantUuid() {
-        return invariantUuid;
-    }
-    public void setInvariantUuid(String invariantUuid) {
-        this.invariantUuid = invariantUuid;
-    }
     public String getUuid() {
         return uuid;
     }
     public void setUuid(String uuid) {
         this.uuid = uuid;
-    }
-    public String getNfcNamingCode() {
-        return nfcNamingCode;
-    }
-    public void setNfcNamingCode(String nfcType) {
-        this.nfcNamingCode = nfcType;
     }
     public List<Attribute> getAttributes() {
         return attributeList;
@@ -82,5 +70,23 @@ public class VM {
     public void setDataQuality(DataQuality dataQuality) {
         this.dataQuality = dataQuality;
     }
+
+    public Pserver getPServer() {
+        return pServer;
+    }
+
+    public void setPServer(Pserver pServer) {
+        this.pServer = pServer;
+    }
+
+    public List<LInterface> getLInterfaceList() {
+        return lInterfaceList;
+    }
+
+    public void setLInterfaceList(List<LInterface> lInterfaceList) {
+        this.lInterfaceList = lInterfaceList;
+    }
+
+
 
 }

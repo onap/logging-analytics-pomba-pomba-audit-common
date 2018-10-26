@@ -35,8 +35,14 @@ public class ModelContext {
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
     @Expose
-    @SerializedName("vfList")
-    private List<VF> vfList = new ArrayList<>();
+    @SerializedName("vnfList")
+    private List<VNF> vnfList = new ArrayList<>();
+    @Expose
+    @SerializedName("pnfList")
+    private List<PNF> pnfList = new ArrayList<>();
+    @Expose
+    @SerializedName("networkList")
+    private List<Network> networkList = new ArrayList<>();
 
     public Service getService() {
         return service;
@@ -59,13 +65,28 @@ public class ModelContext {
     public void addAttribute(Attribute attribute) {
         this.attributeList.add(attribute);
     }
-    public List<VF> getVfs() {
-        return vfList;
+    public List<VNF> getVnfs() {
+        return vnfList;
     }
-    public void setVfs(List<VF> vfList) {
-        this.vfList = vfList;
+    public void setVnfs(List<VNF> vfList) {
+        this.vnfList = vfList;
     }
-    public void addVf(VF vf) {
-        this.vfList.add(vf);
+    public void addVf(VNF vf) {
+        this.vnfList.add(vf);
     }
+    public List<PNF> getPnfs() {
+        return pnfList;
+    }
+    public void setPnfs(List<PNF> pnfList) {
+        this.pnfList = pnfList;
+    }
+    public void addPnf(PNF pnf) {
+        this.pnfList.add(pnf);
+    }
+    public List<Network> getNetworkList() { return networkList; }
+    public void setNetworkList(List<Network> networkList) { this.networkList = networkList; }
+    public void addNetwork(Network network) {
+        this.networkList.add(network);
+    }
+
 }

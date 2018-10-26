@@ -29,8 +29,11 @@ public class Service {
     @SerializedName("name")
     private String name;
     @Expose
-    @SerializedName("invariantUUID")
-    private String invariantUuid;
+    @SerializedName("modelInvariantUUID")
+    private String modelInvariantUUID;
+    @Expose
+    @SerializedName("modelVersionID")
+    private String modelVersionID;
     @Expose
     @SerializedName("uuid")
     private String uuid;
@@ -48,10 +51,10 @@ public class Service {
         this.name = name;
     }
     public String getInvariantUuid() {
-        return invariantUuid;
+        return modelInvariantUUID;
     }
     public void setInvariantUuid(String invariantUuid) {
-        this.invariantUuid = invariantUuid;
+        this.modelInvariantUUID = invariantUuid;
     }
     public String getUuid() {
         return uuid;
@@ -71,7 +74,6 @@ public class Service {
     public void setAttributes(List<Attribute> attributeList) {
         this.attributeList = attributeList;
     }
-    public void addAttribute(Attribute attribute) {
-        this.attributeList.add(attribute);
-    }
+    public String getModelVersionID() { return modelVersionID; }
+    public void setModelVersionID(String modelVersionID) { this.modelVersionID = modelVersionID; }
 }

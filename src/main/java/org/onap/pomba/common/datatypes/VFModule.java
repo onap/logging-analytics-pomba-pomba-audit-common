@@ -29,8 +29,14 @@ public class VFModule {
     @SerializedName("name")
     private String name;
     @Expose
-    @SerializedName("invariantUUID")
-    private String invariantUuid;
+    @SerializedName("modelInvariantUUID")
+    private String modelInvariantUUID;
+    @Expose
+    @SerializedName("modelVersionID")
+    private String modelVersionID;
+    @Expose
+    @SerializedName("modelCustomizationUUID")
+    private String modelCustomizationUUID;
     @Expose
     @SerializedName("uuid")
     private String uuid;
@@ -61,10 +67,10 @@ public class VFModule {
         this.name = name;
     }
     public String getInvariantUuid() {
-        return invariantUuid;
+        return modelInvariantUUID;
     }
     public void setInvariantUuid(String invariantUuid) {
-        this.invariantUuid = invariantUuid;
+        this.modelInvariantUUID = invariantUuid;
     }
     public String getUuid() {
         return uuid;
@@ -117,4 +123,9 @@ public class VFModule {
     public void setDataQuality(DataQuality dataQuality) {
         this.dataQuality = dataQuality;
     }
+    public String getModelVersionID() { return modelVersionID; }
+    public void setModelVersionID(String modelVersionID) { this.modelVersionID = modelVersionID; }
+    public String getModelCustomizationUUID() { return modelCustomizationUUID; }
+    public void setModelCustomizationUUID(String modelCustomizationUUID) { this.modelCustomizationUUID = modelCustomizationUUID; }
+
 }

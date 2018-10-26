@@ -30,9 +30,7 @@ public class VMTests {
     public void testVM() {
         VM aVM = new VM();
         aVM.setName("VM name");
-        aVM.setInvariantUuid("Invariant Uuid");
         aVM.setUuid("Uuid");
-        aVM.setNfcNamingCode("NFC Naming Code");
         DataQuality dataQuality = new DataQuality();
         dataQuality.setStatus(Status.error);
         dataQuality.setErrorText("Test");
@@ -41,8 +39,6 @@ public class VMTests {
         attribute.setName(Name.hostName);
         aVM.addAttribute(attribute);
         assertTrue("VM name doesn't match", aVM.getName().equals("VM name"));
-        assertTrue("VM invariant uuid doesn't match", aVM.getInvariantUuid().equals("Invariant Uuid"));
-        assertTrue("VM NFC Naming Code doesn't match", aVM.getNfcNamingCode().equals("NFC Naming Code"));
         assertTrue("VM uuid doesn't match", aVM.getUuid().equals("Uuid"));
         assertTrue("VM data quality status doesn't match", aVM.getDataQuality().getStatus().equals(Status.error));
         assertTrue("VM data quality error text doesn't match", aVM.getDataQuality().getErrorText().equals("Test"));

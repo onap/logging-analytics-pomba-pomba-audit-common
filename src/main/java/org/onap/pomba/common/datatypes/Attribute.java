@@ -33,7 +33,7 @@ public class Attribute {
     private DataQuality dataQuality = DataQuality.ok();
 
     public enum Name {
-        adminState,
+        adminStatus,
         ipAddress,
         hostName,
         lockedBoolean,
@@ -44,7 +44,31 @@ public class Attribute {
         sharedNetworkBoolean,
         networkRole,
         routerExternalBoolean,
-        imageId
+        imageId,
+        nfNamingCode,
+        nfType,
+        nfRole,
+        nfFunction,
+        nfcNamingCode,
+        nfcNamingTypen,
+        name2,
+        equipType,
+        equipVendor,
+        equipModel,
+        swVesrion,
+        serialNumber,
+        provStatus,
+        fqdn,
+        interfaceRole,
+        interfaceType,
+        speedValue,
+        speedUnits,
+        portDescription,
+        circuitId,
+        linkType,
+        routingProtocol,
+        networkName,
+        isPortMirrored
     }
     public Name getName() {
         return name;
