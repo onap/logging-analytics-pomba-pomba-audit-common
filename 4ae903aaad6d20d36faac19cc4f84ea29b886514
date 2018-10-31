@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bada0100_797877f2",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/ModelContext.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "This is a legacy thing, but the standard established in the other classes is to have dataQuality and attributeList in that order at the end of the list of all the other fields.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_3962ef3e",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Network.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "As before about ordering.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_59657343",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/PInterface.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "As before about ordering.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_195feb73",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Pserver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "As before about ordering.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_d9508360",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/VFModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "As before about ordering.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_794f17be",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/VM.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "As before about ordering.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_39c98f26",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/VNF.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "As before about ordering.",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_99451bb5",
+        "filename": "src/test/java/org/onap/pomba/common/datatypes/ServiceTests.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2018-10-31T16:14:07Z",
+      "side": 1,
+      "message": "import list neads cleaning",
+      "revId": "4ae903aaad6d20d36faac19cc4f84ea29b886514",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
