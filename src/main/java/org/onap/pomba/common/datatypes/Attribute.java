@@ -56,7 +56,7 @@ public class Attribute {
         equipType,
         equipVendor,
         equipModel,
-        swVesrion,
+        swVersion,
         serialNumber,
         provStatus,
         fqdn,
@@ -69,7 +69,12 @@ public class Attribute {
         linkType,
         routingProtocol,
         networkName,
-        isPortMirrored
+        isPortMirrored,
+        networkFunction,
+        resourceVersion,
+        name2Source,
+        managementOptions,
+        frameId
     }
     @ApiModelProperty(value = "Name of the attribute")
     public Name getName() {
