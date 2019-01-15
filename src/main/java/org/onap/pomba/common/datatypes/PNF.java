@@ -43,6 +43,12 @@ public class PNF {
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
+    @Expose
+    @SerializedName("networkList")
+    private List<Network> networks = new ArrayList<>();
+    @Expose
+    @SerializedName("pInterfaceList")
+    private List<PInterface> pInterfaceList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -79,5 +85,22 @@ public class PNF {
     public void setModelInvariantUUID(String modelInvariantUUID) {
         this.modelInvariantUUID = modelInvariantUUID;
     }
+
+    public List<Network> getNetworks() {
+        return networks;
+    }
+
+    public void setNetworks(List<Network> networks) {
+        this.networks = networks;
+    }
+
+    public List<PInterface> getPInterfaceList() {
+        return pInterfaceList;
+    }
+
+    public void setPInterfaceList(List<PInterface> pInterfaceList) {
+        this.pInterfaceList = pInterfaceList;
+    }
+
 
 }
