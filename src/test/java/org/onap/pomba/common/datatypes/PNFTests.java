@@ -19,7 +19,7 @@
 package org.onap.pomba.common.datatypes;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+    import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class PNFTests {
@@ -44,7 +44,7 @@ public class PNFTests {
         assertTrue("PNF model invariant uuid  doesn't match", aPNF.getModelInvariantUUID().equals("b-12345"));
         assertTrue("PNF data quality status doesn't match", aPNF.getDataQuality().getStatus().equals(DataQuality.Status.error));
         assertTrue("PNF data quality error text doesn't match", aPNF.getDataQuality().getErrorText().equals("Test"));
-        assertTrue("PNF attribute name doesn't match", aPNF.getAttributes().get(0).getName().equals(Attribute.Name.hostName));
-        assertEquals(aPNF.getAttributes().size(), 1);
+        assertTrue("PNF attribute name doesn't match", aPNF.getAttributeList().get(0).getName().equals(Attribute.Name.hostName));
+        assertEquals(aPNF.getAttributeList().size(), 1);
     }
 }

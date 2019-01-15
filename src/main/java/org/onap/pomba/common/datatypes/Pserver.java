@@ -36,10 +36,10 @@ public class Pserver {
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
+
     @Expose
     @SerializedName("pInterfaceList")
     private List<PInterface> pInterfaceList = new ArrayList<>();
-    @Expose
     @SerializedName("logicalLinkList")
     private List<LogicalLink> logicalLinkList = new ArrayList<>();
 
