@@ -74,7 +74,13 @@ public class Attribute {
         resourceVersion,
         name2Source,
         managementOptions,
-        frameId
+        frameId,
+        ptniiName,
+        topology,
+        inMaintenanceBoolean,
+        purpose,
+        description,
+        equipmentID
     }
     @ApiModelProperty(value = "Name of the attribute")
     public Name getName() {

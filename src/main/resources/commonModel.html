@@ -514,21 +514,6 @@ POMBA Audit Context Builder API
         </tr>
     
         <tr>
-            <td>pnfs</td>
-            <td>
-                
-                
-                    array[<a href="#/definitions/PNF">PNF</a>]
-                
-                
-                
-            </td>
-            <td>optional</td>
-            <td>List of PNF associated with the service instance</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>vnfs</td>
             <td>
                 
@@ -540,6 +525,21 @@ POMBA Audit Context Builder API
             </td>
             <td>optional</td>
             <td>List of VNF associated with the service instance</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>pnfs</td>
+            <td>
+                
+                
+                    array[<a href="#/definitions/PNF">PNF</a>]
+                
+                
+                
+            </td>
+            <td>optional</td>
+            <td>List of PNF associated with the service instance</td>
             <td></td>
         </tr>
     
@@ -892,11 +892,41 @@ POMBA Audit Context Builder API
         </tr>
     
         <tr>
+            <td>networks</td>
+            <td>
+                
+                
+                    array[<a href="#/definitions/Network">Network</a>]
+                
+                
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+        <tr>
             <td>attributes</td>
             <td>
                 
                 
                     array[<a href="#/definitions/Attribute">Attribute</a>]
+                
+                
+                
+            </td>
+            <td>optional</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>pinterfaceList</td>
+            <td>
+                
+                
+                    array[<a href="#/definitions/PInterface">PInterface</a>]
                 
                 
                 
