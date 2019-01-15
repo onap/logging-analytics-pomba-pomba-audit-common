@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_af4cfe9e",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2015
+      },
+      "writtenOn": "2019-01-15T20:40:48Z",
+      "side": 1,
+      "message": "inMaintenanceBoolean attribute is redundant. in-maint in AAI and other DS attribute should be mapped to existing lockedBoolean to be consistent with vserver mappings",
+      "range": {
+        "startLine": 80,
+        "startChar": 8,
+        "endLine": 80,
+        "endChar": 28
+      },
+      "revId": "094bda3558cb4819acb2c0b6b8d5ce1cd8ee9131",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
