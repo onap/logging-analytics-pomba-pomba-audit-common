@@ -22,6 +22,52 @@
       "revId": "094bda3558cb4819acb2c0b6b8d5ce1cd8ee9131",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_ef7e86ae",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/Attribute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-01-15T20:41:04Z",
+      "side": 1,
+      "message": "inMaintenanceBoolean same as lockedBoolean above.",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 8
+      },
+      "revId": "094bda3558cb4819acb2c0b6b8d5ce1cd8ee9131",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_0f7c2ab4",
+        "filename": "src/main/java/org/onap/pomba/common/datatypes/PNF.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-01-15T20:41:04Z",
+      "side": 1,
+      "message": "networkList also found in ModelContext.java. Are we keeping both?",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 4
+      },
+      "revId": "094bda3558cb4819acb2c0b6b8d5ce1cd8ee9131",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
