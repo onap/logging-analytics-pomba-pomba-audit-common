@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_a04c0d9f",
+        "filename": "src/test/java/org/onap/pomba/common/datatypes/PNFTests.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 3131
+      },
+      "writtenOn": "2019-01-16T20:55:58Z",
+      "side": 1,
+      "message": "Why did we add whitespace here?",
+      "revId": "45aba588d7ae2cdaaaf1d561c7120d851e0a1c84",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
