@@ -40,6 +40,9 @@ public class PInterface {
     @SerializedName("physicalLinkList")
     private List<PhysicalLink> physicalLinkList = new ArrayList<>();
     @Expose
+    @SerializedName("logicalLinkList")
+    private List<LogicalLink> logicalLinkList = new ArrayList<>();
+    @Expose
     @SerializedName("port")
     private Port port;
 
@@ -78,6 +81,15 @@ public class PInterface {
     public void setPhysicalLinkList(List<PhysicalLink> physicalLinkList) {
         this.physicalLinkList = physicalLinkList;
     }
+
+    public List<LogicalLink> getLogicalLinkList() {
+        return logicalLinkList;
+    }
+
+    public void setLogicalLinkList(List<LogicalLink> logicalLinkList) {
+        this.logicalLinkList = logicalLinkList;
+    }
+
 
     public Port getPort() {
         return port;

@@ -39,9 +39,6 @@ public class Pserver {
     @Expose
     @SerializedName("pInterfaceList")
     private List<PInterface> pInterfaceList = new ArrayList<>();
-    @Expose
-    @SerializedName("logicalLinkList")
-    private List<LogicalLink> logicalLinkList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -76,14 +73,5 @@ public class Pserver {
     public void setPInterfaceList(List<PInterface> pInterfaceList) {
         this.pInterfaceList = pInterfaceList;
     }
-
-    public List<LogicalLink> getLogicalLinkList() {
-        return logicalLinkList;
-    }
-
-    public void setLogicalLinkList(List<LogicalLink> logicalLinkList) {
-        this.logicalLinkList = logicalLinkList;
-    }
-
 
 }
