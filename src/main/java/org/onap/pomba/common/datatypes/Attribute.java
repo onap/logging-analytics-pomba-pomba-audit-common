@@ -79,7 +79,9 @@ public class Attribute {
         topology,
         purpose,
         description,
-        equipmentID
+        equipmentID,
+        ipVersion,
+        linkRole
     }
     @ApiModelProperty(value = "Name of the attribute")
     public Name getName() {
