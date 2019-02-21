@@ -45,6 +45,9 @@ public class PInterface {
     @Expose
     @SerializedName("port")
     private Port port;
+    @Expose
+    @SerializedName("lInterfaceList")
+    private List<LInterface> lInterfaceList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -98,7 +101,10 @@ public class PInterface {
     public void setPort(Port port) {
         this.port = port;
     }
-
-
-
+    public List<LInterface> getLInterfaceList() {
+        return lInterfaceList;
+    }
+    public void setLInterfaceList(List<LInterface> lInterfaceList) {
+        this.lInterfaceList = lInterfaceList;
+    }
 }
