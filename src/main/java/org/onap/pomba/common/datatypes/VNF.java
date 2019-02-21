@@ -56,6 +56,9 @@ public class VNF {
     @Expose
     @SerializedName("networkList")
     private List<Network> networks = new ArrayList<>();
+    @Expose
+    @SerializedName("lInterfaceList")
+    private List<LInterface> lInterfaceList = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -123,6 +126,13 @@ public class VNF {
 
     public void setNetworks(List<Network> networks) {
         this.networks = networks;
+    }
+
+    public List<LInterface> getlInterfaceList() {
+        return lInterfaceList;
+    }
+    public void setlInterfaceList(List<LInterface> lInterfaceList) {
+        this.lInterfaceList = lInterfaceList;
     }
 
 }
