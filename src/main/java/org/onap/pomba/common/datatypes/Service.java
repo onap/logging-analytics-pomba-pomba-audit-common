@@ -43,6 +43,10 @@ public class Service {
     @Expose
     @SerializedName("attributeList")
     private List<Attribute> attributeList = new ArrayList<>();
+    @Expose
+    @SerializedName("logicalLinkList")
+    private List<LogicalLink> logicalLinkList = new ArrayList<>();
+
 
     public String getName() {
         return name;
@@ -79,4 +83,11 @@ public class Service {
         this.modelInvariantUUID = modelInvariantUUID;
     }
 
+    public List<LogicalLink> getLogicalLinkList() {
+        return logicalLinkList;
+    }
+
+    public void setLogicalLinkList(List<LogicalLink> logicalLinkList) {
+        this.logicalLinkList = logicalLinkList;
+    }
 }

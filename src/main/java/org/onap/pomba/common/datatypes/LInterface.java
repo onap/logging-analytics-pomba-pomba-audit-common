@@ -40,6 +40,10 @@ public class LInterface {
     @Expose
     @SerializedName("port")
     private Port port = new Port();
+    @Expose
+    @SerializedName("logicalLinkList")
+    private List<LogicalLink> logicalLinkList = new ArrayList<>();
+
 
     public String getName() {
         return name;
@@ -77,6 +81,13 @@ public class LInterface {
         this.port = port;
     }
 
+    public List<LogicalLink> getLogicalLinkList() {
+        return logicalLinkList;
+    }
+
+    public void setLogicalLinkList(List<LogicalLink> logicalLinkList) {
+        this.logicalLinkList = logicalLinkList;
+    }
 
 }
 
