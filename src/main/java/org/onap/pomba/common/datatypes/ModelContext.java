@@ -47,6 +47,10 @@ public class ModelContext {
     @Expose
     @SerializedName("networkList")
     private List<Network> networkList = new ArrayList<>();
+    @Expose
+    @SerializedName("logicalLinkList")
+    private List<LogicalLink> logicalLinkList = new ArrayList<>();
+
 
     @ApiModelProperty(value = "Service object of the model")
     public Service getService() {
@@ -92,6 +96,15 @@ public class ModelContext {
     public void addPnf(PNF pnf) {
         this.pnfList.add(pnf);
     }
+
+    public List<LogicalLink> getLogicalLinkList() {
+        return logicalLinkList;
+    }
+
+    public void setLogicalLinkList(List<LogicalLink> logicalLinkList) {
+        this.logicalLinkList = logicalLinkList;
+    }
+
     @ApiModelProperty(value = "List of networks associated with the service instance")
     public List<Network> getNetworkList() { return networkList; }
     public void setNetworkList(List<Network> networkList) { this.networkList = networkList; }
