@@ -78,4 +78,14 @@ public class ModelContextTests {
         assertTrue("ModelContext VF name doesn't match", modelContext.getVnfs().get(0).getName().equals("VF name"));
     }
 
+    @Test
+    public void testLogicalLink() {
+        ModelContext modelContext = new ModelContext();
+        List<LogicalLink> logicalLinkList = new ArrayList<LogicalLink>();
+        LogicalLink aLogicalLink = new LogicalLink();
+        aLogicalLink.setName("Logical-Link name");
+        logicalLinkList.add(aLogicalLink);
+        modelContext.setLogicalLinkList(logicalLinkList);
+        assertEquals(modelContext.getLogicalLinkList().size(), 1);
+    }
 }
