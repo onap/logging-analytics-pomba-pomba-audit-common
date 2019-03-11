@@ -13,11 +13,12 @@ The result is JAR file under "target" folder
 
 # Getting Help
 
-*** to be completed on release ***
+https://wiki.onap.org/display/DW/POMBA+Dublin
 
 
 # Release notes for versions
 
-1.3.0-SNAPSHOT
+1.4.0: ONAP Dublin release
 
-Initial ONAP release
+1.3.2: ONAP Casablanca release
+
