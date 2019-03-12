@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Geora Barsky <georab@amdocs.com>
+Submitted-by: Geora Barsky <georab@amdocs.com>
+Submitted-at: Tue, 12 Mar 2019 14:39:09 +0000
+Reviewed-on: https://gerrit.onap.org/r/81966
+Project: logging-analytics/pomba/pomba-audit-common
+Branch: refs/heads/master
