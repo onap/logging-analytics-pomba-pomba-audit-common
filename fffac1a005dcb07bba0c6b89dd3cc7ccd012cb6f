@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Luke Parker <lparker@amdocs.com>
+Submitted-by: Luke Parker <lparker@amdocs.com>
+Submitted-at: Sun, 25 Aug 2019 13:30:14 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/logging-analytics/pomba/pomba-audit-common/+/94213
+Project: logging-analytics/pomba/pomba-audit-common
+Branch: refs/heads/master
