@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Pierre Rioux <pierre.rioux@amdocs.com>
+Submitted-by: Pierre Rioux <pierre.rioux@amdocs.com>
+Submitted-at: Tue, 27 Aug 2019 20:13:45 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/logging-analytics/pomba/pomba-audit-common/+/94314
+Project: logging-analytics/pomba/pomba-audit-common
+Branch: refs/heads/master
