@@ -1,0 +1,5 @@
+---
+distribution_type: 'maven'
+version: '1.5.1'
+project: 'pomba-audit-common'
+log_dir: 'logging-analytics-pomba-pomba-audit-common-maven-stage-master/127/'
